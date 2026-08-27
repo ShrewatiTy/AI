@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting AI Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Assistant</h1>
+    </header>
+
+    <main>
+      <form action="cgi-bin/troubleshooter.c" method="post">
+        <label for="problemType">Problem category</label>
+        <select id="problemType" name="problemType" required>
+          <option value="">Select one</option>
+          <option value="installation">Installation or setup</option>
+          <option value="performance">Performance issues</option>
+          <option value="accuracy">Poor output quality</option>
+          <option value="integration">Integration or API error</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="description">Describe the issue</label>
+        <textarea id="description" name="description" rows="6" required placeholder="Explain what went wrong, including any error messages."></textarea>
+
+        <button type="submit">Get Troubleshooting Advice</button>
+      </form>
+
+      <section class="note">
+        <h2>How it works</h2>
+        <p>This page submits your issue to a simple C CGI program. The backend analyzes the selected category and returns guidance to help troubleshoot the problem.</p>
+      </section>
+
+      <section class="demo-link">
+        <h2>Quick access</h2>
+        <p>If your browser does not run CGI from a local file, open the static demo here: <a href="demo.html">Troubleshooting AI demo</a>.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
