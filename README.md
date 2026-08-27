@@ -1,2 +1,2 @@
 # AI
-ERFTGYHUJIO
+cgi bin=trouble shooter.c
